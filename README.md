@@ -45,17 +45,16 @@
 
 
 commands:
-wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-5+debian12_all.deb
-dpkg -i zabbix-release_6.0-5+debian12_all.deb
-apt update
-apt install zabbix-server-pgsql zabbix-frontend-php php8.2-pgsql zabbix-apache-conf zabbix-sql-scripts 
-su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD
-'\'123456789\'';"
-su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
+1. wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-5+debian12_all.deb
+2. dpkg -i zabbix-release_6.0-5+debian12_all.deb
+3. apt update
+4. apt install zabbix-server-pgsql zabbix-frontend-php php8.2-pgsql zabbix-apache-conf zabbix-sql-scripts 
+5. su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD'\'123456789\'';"
+6. su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
 zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql Zabbix
 sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
-systemctl restart zabbix-server apache2
-systemctl enable zabbix-server apache2
+7. systemctl restart zabbix-server apache2
+8. systemctl enable zabbix-server apache2
 
 
 ---
