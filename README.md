@@ -41,7 +41,6 @@
 ![Безымянный](https://github.com/AlexandrPopov88/-Zabbix1-hw/assets/166269665/0981be46-8483-4f2d-b4c4-6f0e7265e09e)
 ![подключение](https://github.com/AlexandrPopov88/-Zabbix1-hw/assets/166269665/8d621d51-d355-4c98-961e-cf88c99369d1)
 ![забикс1](https://github.com/AlexandrPopov88/-Zabbix1-hw/assets/166269665/8fbef35a-80cd-4fb5-9b77-87283d88a835)
-![подключение](https://github.com/AlexandrPopov88/-Zabbix1-hw/assets/166269665/444b0ded-34f8-4e60-ba7f-bb92fc471706)
 
 
 commands:
